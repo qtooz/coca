@@ -95,9 +95,9 @@
   }
   &__subtitle {
     margin-bottom: 69px;
-		@include small-mobile {
-			margin-bottom: 20px;
-		}
+    @include small-mobile {
+      margin-bottom: 20px;
+    }
   }
   &__form {
     @include flex-align-center;

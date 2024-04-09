@@ -7,9 +7,9 @@ export const useTheme = () => {
   const theme = localStorage.getItem('theme') || 'light';
   themeTargetDataSet.theme = theme;
 
-	if (theme === 'dark') {
-		themeSwitcher.checked = true;
-	}
+  if (theme === 'dark') {
+    themeSwitcher.checked = true;
+  }
 
   themeSwitcher.addEventListener('click', () => {
     if (themeTargetDataSet.theme === 'light') {

@@ -83,10 +83,10 @@
       color: var(--neutral-color-140);
       transform: translateX(-50%);
 
-			@include small-tablet {
-				font-size: 20px;
-				top: -30px;
-			}
+      @include small-tablet {
+        font-size: 20px;
+        top: -30px;
+      }
     }
     &-checkbox {
       appearance: none;
@@ -120,7 +120,7 @@
     color: var(--neutral-color-100);
 
     @include small-tablet {
-			font-size: 20px;
+      font-size: 20px;
       line-height: 200%;
     }
 
