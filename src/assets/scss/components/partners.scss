@@ -1,0 +1,57 @@
+.partners {
+  &__container {
+    padding: 87px;
+  
+    @include flex-all-center;
+    gap: 30px;
+    @include mobile {
+      flex-direction: column;
+    }
+    @include small-mobile {
+      padding: 40px;
+    }
+  }
+  &__title {
+    max-width: 325px;
+    font-weight: 500;
+    line-height: 1.77778;
+    color: #7e8492;
+  }
+  &__num {
+    display: block;
+    margin-bottom: 16px;
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 1.2;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+    @include mobile {
+      font-size: 48px;
+    }
+    @include small-mobile {
+      font-size: 38px;
+			margin-bottom: 10px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 30px;
+    @include small-mobile {
+      justify-content: center;
+      gap: 15px;
+    }
+  }
+  &__item {
+    @include flex-all-center;
+    border-radius: 16px;
+    width: 160px;
+    height: 90px;
+    background-color: #fff;
+
+    @include small-mobile {
+      width: 140px;
+      height: 70px;
+    }
+  }
+}
