@@ -1,7 +1,7 @@
 .partners {
   &__container {
     padding: 87px;
-  
+
     @include flex-all-center;
     gap: 30px;
     @include mobile {
@@ -30,10 +30,10 @@
     }
     @include small-mobile {
       font-size: 38px;
-			margin-bottom: 10px;
+      margin-bottom: 10px;
     }
   }
-  &__list {
+  &__wrapper {
     display: flex;
     flex-wrap: wrap;
     gap: 10px 30px;
@@ -41,17 +41,22 @@
       justify-content: center;
       gap: 15px;
     }
+		
   }
   &__item {
-    @include flex-all-center;
-    border-radius: 16px;
-    width: 160px;
-    height: 90px;
-    background-color: #fff;
+    &-logo {
+      @include flex-all-center;
+      border-radius: 16px;
+      width: 160px;
+      height: 90px;
+      background-color: #fff;
 
-    @include small-mobile {
-      width: 140px;
-      height: 70px;
+      @include mobile {
+        width: 140px;
+        height: 70px;
+      }
     }
+  }
+  &__list {
   }
 }
