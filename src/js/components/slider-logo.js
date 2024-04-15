@@ -29,7 +29,7 @@ const resizableSwiper = (breakpoint, swiperClass, swiperSettings) => {
     {
       loop: true,
       spaceBetween: 32,
-      slidesPerView: 1,
+      slidesPerView: 2,
       pagination: {
         el: '.swiper-pagination',
         clickable: true,

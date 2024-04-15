@@ -5,6 +5,7 @@
     @include flex-all-center;
     gap: 30px;
     @include mobile {
+      display: block;
       flex-direction: column;
     }
     @include small-mobile {
@@ -16,6 +17,7 @@
     font-weight: 500;
     line-height: 1.77778;
     color: #7e8492;
+    margin-bottom: 20px;
   }
   &__num {
     display: block;
@@ -36,7 +38,14 @@
   &__wrapper {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     gap: 10px 30px;
+    @include mobile {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      gap: 5px 10px
+    }
     @include small-mobile {
       justify-content: center;
       gap: 15px;
