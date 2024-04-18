@@ -1,6 +1,8 @@
 import Swiper from 'swiper';
 import 'swiper/css';
-
+import { Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css/autoplay';
+import 'swiper/css/pagination';
 
 const resizableSwiper = (breakpoint, swiperClass, swiperSettings) => {
   let swiper;
@@ -24,12 +26,13 @@ const resizableSwiper = (breakpoint, swiperClass, swiperSettings) => {
 };
 
 resizableSwiper('(max-width: 576px)', '.partners__list', {
+  modules: [Pagination, Autoplay],
   loop: true,
   spaceBetween: 12,
   slidesPerView: 2,
-	autoplay: {
-		delay: 5000,
-	},
+  autoplay: {
+    delay: 2000,
+  },
   pagination: {
     el: '.partners__pagination',
     clickable: true,
