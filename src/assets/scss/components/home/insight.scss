@@ -5,7 +5,12 @@
 
     @include mobile {
       padding-top: 86px;
+      padding-bottom: 61px;
     }
+
+		@include small-tablet {
+			padding-bottom: 40px;
+		}
   }
 
   &__title {
@@ -14,9 +19,9 @@
     letter-spacing: -0.04em;
     color: var(--neutral-color-100);
 
-		@include mobile {
-			margin-bottom: 12px;
-		}
+    @include mobile {
+      margin-bottom: 12px;
+    }
   }
 
   &__descr {
@@ -63,12 +68,12 @@
     @include mini-desktop {
       max-width: 485px;
     }
-		@include mobile {
-			max-width: 380px;
-		}
-		@include small-mobile {
-			max-width: 300px;
-		}
+    @include mobile {
+      max-width: 380px;
+    }
+    @include small-mobile {
+      max-width: 300px;
+    }
     &-img {
       margin-bottom: 16px;
     }
@@ -80,9 +85,9 @@
       line-height: 1.5;
       color: #7e8492;
 
-			@include small-mobile {
-				flex-direction: column;
-			}
+      @include small-mobile {
+        flex-direction: column;
+      }
     }
     &-author {
       font-style: normal;

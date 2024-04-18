@@ -40,6 +40,7 @@
     flex-wrap: wrap;
     flex-direction: row;
     gap: 10px 30px;
+
     @include mobile {
       display: flex;
       flex-wrap: nowrap;
@@ -68,4 +69,5 @@
   }
   &__list {
   }
+
 }

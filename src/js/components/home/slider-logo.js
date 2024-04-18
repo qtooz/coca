@@ -1,15 +1,16 @@
 import Swiper from 'swiper';
 import 'swiper/css';
 
+
 const resizableSwiper = (breakpoint, swiperClass, swiperSettings) => {
   let swiper;
   breakpoint = window.matchMedia(breakpoint);
 
-  const enableSwiper = function(className, settings) {
+  const enableSwiper = function (className, settings) {
     swiper = new Swiper(className, settings);
-  }
+  };
 
-  const checker = function() {
+  const checker = function () {
     if (breakpoint.matches) {
       return enableSwiper(swiperClass, swiperSettings);
     } else {
@@ -22,20 +23,17 @@ const resizableSwiper = (breakpoint, swiperClass, swiperSettings) => {
   checker();
 };
 
-
-  resizableSwiper(
-    '(max-width: 576px)',
-    '.partners__list',
-    {
-      loop: true,
-      spaceBetween: 32,
-      slidesPerView: 2,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    }
-  );
-
+resizableSwiper('(max-width: 576px)', '.partners__list', {
+  loop: true,
+  spaceBetween: 12,
+  slidesPerView: 2,
+	autoplay: {
+		delay: 5000,
+	},
+  pagination: {
+    el: '.partners__pagination',
+    clickable: true,
+  },
+});
 
 export { resizableSwiper };
