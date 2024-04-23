@@ -28,8 +28,8 @@ const resizableSwiper = (breakpoint, swiperClass, swiperSettings) => {
 resizableSwiper('(max-width: 576px)', '.partners__list', {
   modules: [Pagination, Autoplay],
   loop: true,
-  spaceBetween: 12,
-  slidesPerView: 2,
+  spaceBetween: 0,
+  slidesPerView: 1,
   autoplay: {
     delay: 2000,
   },

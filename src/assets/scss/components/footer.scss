@@ -1,0 +1,227 @@
+.footer {
+  &__container {
+    padding-top: 112px;
+    max-width: 1200px;
+    background-color: var(--overview-bg-color);
+  }
+  &__head {
+    @include flex-justify-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 134px;
+
+    @include mobile {
+      margin-bottom: 60px;
+    }
+    @include small-mobile {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__title {
+    margin-bottom: 24px;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 1.2;
+    color: #fff;
+
+    @include tablet {
+      font-size: 54px;
+    }
+    @include small-tablet {
+      font-size: 48px;
+    }
+    @include small-mobile {
+      font-size: 32px;
+      text-align: center;
+    }
+  }
+
+  &__descr {
+    max-width: 543px;
+    font-weight: 500;
+    line-height: 1.77778;
+    color: #afb3bb;
+
+    @include small-tablet {
+      max-width: 400px;
+    }
+  }
+
+  &__btn {
+    font-weight: 700;
+    text-align: center;
+    color: black;
+    background-color: #fff;
+    border-radius: 100px;
+    width: 177px;
+    height: 56px;
+    transition: var(--transition);
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  &__middle {
+    @include flex-justify-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding-bottom: 56px;
+    border-bottom: 1px solid #606060;
+
+    @include mobile {
+      @include flex-all-center;
+      flex-wrap: nowrap;
+      flex-direction: column;
+    }
+  }
+  &__logo {
+    @include mobile {
+    }
+    &-link {
+      & svg {
+        @include mobile {
+          display: block;
+          max-width: 130px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        & path {
+          fill: white;
+
+          &:last-child {
+            fill: black;
+          }
+        }
+        & circle {
+          fill: #fff;
+        }
+      }
+    }
+    &-descr {
+      max-width: 292px;
+      font-weight: 500;
+      line-height: 1.625;
+      color: #7e8492;
+
+      @include mobile {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+    }
+  }
+
+  &__block {
+    position: relative;
+    text-align: center;
+    padding-bottom: 120px;
+
+    @include mobile {
+      padding-bottom: 20px;
+    }
+    &-item {
+    }
+    &-title {
+      margin-bottom: 24px;
+      font-weight: 700;
+      color: #fff;
+
+      @include mobile {
+        margin-bottom: 15px;
+      }
+    }
+    &-content {
+      max-height: 0;
+      opacity: 0;
+      visibility: hidden;
+      padding: 0 10px;
+      transition: var(--transition);
+
+      &-list {
+      }
+
+      &-item {
+        &:not(:last-child) {
+          margin-bottom: 16px;
+        }
+      }
+
+      &-link {
+        font-weight: 400;
+        color: #7e8492;
+				transition: var(--transition);
+      }
+      &-link:hover {
+        color: #fff;
+      }
+    }
+  }
+  &__bottom {
+		@include flex-justify-between;
+    padding: 40px 0px;
+		gap: 30px;
+		flex-wrap: wrap;
+		@include small-mobile {
+			@include flex-all-center;
+		}
+
+    &-socials {
+    }
+    &-list {
+      @include flex-align-center;
+      gap: 24px;
+    }
+
+    &-item {
+    }
+    &-link {
+      & svg {
+        transition: var(--transition);
+      }
+      & svg:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  &__support {
+    &-list {
+      @include flex-align-center;
+      gap: 24px;
+    }
+    &-link {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.42857;
+      color: #fff;
+			transition: var(--transition);
+    }
+    &-link:hover {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.42857;
+      color: #7e8492;
+			transition: var(--transition);
+    }
+  }
+}
+.footer__block-content.active {
+  visibility: visible;
+  opacity: 1;
+  padding: 10px;
+  transition: var(--transition);
+}
+.footer__block-title svg {
+  display: none;
+  transition: var(--transition);
+
+  @include mobile {
+    display: inline-block;
+  }
+}
+.footer__block-title path {
+  fill: #7e8492;
+}
+.footer__block-title.active svg {
+  transform: rotate(180deg);
+}
