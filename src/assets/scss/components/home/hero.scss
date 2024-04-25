@@ -1,64 +1,7 @@
 .hero {
-  position: relative;
+  
   padding: 87px 0 141px;
-  @include mini-desktop {
-    padding: 67px 0 120px;
-  }
-  @include mobile {
-    padding: 0px 0 120px;
-  }
-	@include small-mobile {
-		padding: 0 0 50px;
-	}
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 50px;
-    left: 180px;
-    z-index: var(--z-index-0);
-    display: inline-block;
-    border-radius: 100%;
-    width: 551px;
-    height: 551px;
-    background: #fa7515;
-    opacity: 0.23;
-    filter: blur(220px);
-
-    @include mini-desktop {
-      left: 80px;
-      width: 350px;
-      height: 350px;
-    }
-    @include small-tablet {
-      top: 20px;
-      left: 40px;
-      width: 251px;
-      height: 251px;
-    }
-  }
-  &::after {
-    content: '';
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
-    z-index: var(--z-index-0);
-    display: inline-block;
-    border-radius: 100%;
-    width: 525px;
-    height: 525px;
-    background: var(--success-color-70);
-    filter: blur(180px);
-
-    @include mini-desktop {
-      width: 320px;
-      height: 320px;
-    }
-    @include small-tablet {
-      width: 220px;
-      height: 220px;
-    }
-  }
+ 
 
   &__container {
     @include flex-justify-between;

@@ -1,0 +1,253 @@
+.hero {
+  padding: 90px 0 78px;
+
+	@include mobile {
+		padding: 40px 0 68px;
+	}
+
+  &__top {
+    text-align: center;
+    padding-bottom: 186px;
+
+		@include tablet {
+			padding-bottom: 86px;
+		}
+		@include mobile {
+			padding-bottom: 56px;
+		}
+
+    &::before {
+      top: -20px;
+    }
+
+    &::after {
+      bottom: -200px;
+    }
+  }
+  &__title {
+    display: inline-block;
+    margin-bottom: 24px;
+    font-weight: 600;
+    text-align: center;
+    color: var(--primory-color-30);
+    border-radius: 16px;
+    padding: 4px 12px;
+    background: #1463ff1a;
+
+		@include small-mobile {
+			margin-bottom: 18px;
+		}
+  }
+  &__descr {
+    margin: 0 auto 56px;
+    max-width: 903px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+
+		@include mobile {
+			margin-bottom: 36px;
+		}
+  }
+
+  &__switcher {
+    position: relative;
+    border-radius: 12px;
+    width: 44px;
+    height: 24px;
+    background: #ededed;
+    // transform: translateY(8px);
+    transition: var(--transition);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      background: #1463ff;
+      transition: var(--transition);
+      opacity: 0.6;
+    }
+    &-wrapper {
+      display: inline-flex;
+			align-items: center;
+			justify-content: center;
+      gap: 12px;
+
+    }
+    &-checkbox {
+      appearance: none;
+    }
+    &:has(&-checkbox:checked) {
+      &::before {
+        left: 22px;
+        opacity: 1;
+      }
+    }
+    &-text {
+      font-weight: 500;
+      line-height: 1.625;
+      color: #7e8492;
+    }
+  }
+  &__item {
+    border: 1px solid var(--neutral-color-30);
+    border-radius: 16px;
+    padding: 40px 24px;
+    max-width: 378px;
+
+    @include mini-desktop {
+      max-width: 320px;
+
+			
+    }
+    
+		@include tablet {
+			max-width: 450px;
+
+			&:first-child {
+				order: 2;
+			}
+			&:last-child {
+				order: 3;
+			}
+		}
+
+    &--popular {
+      background-color: var(--neutral-color-90);
+      border: 1px solid var(--primory-color-60);
+      transform: translateY(-76px);
+
+      @include tablet {
+        transform: inherit;
+        order: 1;
+				
+      }
+    }
+  }
+
+  &__plans {
+    @include flex-all-between;
+
+    @include tablet {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    &-icon {
+      @include flex-all-center;
+      margin-bottom: 16px;
+      border-radius: 100px;
+      width: 40px;
+      height: 40px;
+      background-color: var(--neutral-color-20);
+
+      &--popular {
+        background-color: var(--primory-color-30);
+      }
+    }
+
+    &-title {
+      margin-bottom: 8px;
+      font-weight: 600;
+      line-height: 1.41667;
+      color: var(--neutral-color-100);
+
+      &--popular {
+        color: #fff;
+      }
+    }
+    &-descr {
+      margin-bottom: 24px;
+      font-weight: 500;
+      line-height: 1.625;
+      color: #7e8492;
+    }
+    &-price {
+      margin-bottom: 24px;
+      font-weight: 600;
+      letter-spacing: -0.04em;
+      color: var(--neutral-color-100);
+
+      &--popular {
+        color: #fff;
+      }
+      &-text {
+        font-weight: 500;
+        line-height: 1.625;
+        color: #7e8492;
+
+        &--popular {
+          color: #fff;
+        }
+      }
+    }
+    &-list {
+      margin-bottom: 40px;
+      &-title {
+        margin-bottom: 16px;
+        font-weight: 700;
+        line-height: 1.5;
+        color: var(--neutral-color-100);
+
+        &--popular {
+          color: #fff;
+        }
+      }
+    }
+    &-item {
+      font-weight: 500;
+      line-height: 1.625;
+      color: var(--neutral-color-100);
+
+      &::before {
+        content: '';
+        display: inline-block;
+        background: url(../icons/pricing-list-icon.svg);
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        transform: translateY(2px);
+      }
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+
+      &--inaccess {
+        text-decoration: line-through;
+        color: #7e8492;
+
+        &::before {
+          background: url(../icons/pricing-list-icon-inaccess.svg);
+        }
+      }
+      &--popular {
+        color: #fff;
+      }
+    }
+    &-btn {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border: 1px solid #ced1d8;
+      border-radius: 100px;
+      line-height: 1.5;
+      padding: 16px 35px;
+      font-weight: 600;
+      color: var(--neutral-color-100);
+      transition: var(--transition);
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+      &--popular {
+        background-color: #fff;
+        color: black;
+      }
+    }
+  }
+}
