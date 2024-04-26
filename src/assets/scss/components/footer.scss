@@ -1,8 +1,9 @@
 .footer {
+	background-color: var(--overview-bg-color);
   &__container {
     padding-top: 112px;
     max-width: 1200px;
-    background-color: var(--overview-bg-color);
+    
   }
   &__head {
     @include flex-justify-between;

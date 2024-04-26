@@ -1,20 +1,20 @@
 .hero {
   padding: 90px 0 78px;
 
-	@include mobile {
-		padding: 40px 0 68px;
-	}
+  @include mobile {
+    padding: 40px 0 68px;
+  }
 
   &__top {
     text-align: center;
     padding-bottom: 186px;
 
-		@include tablet {
-			padding-bottom: 86px;
-		}
-		@include mobile {
-			padding-bottom: 56px;
-		}
+    @include tablet {
+      padding-bottom: 86px;
+    }
+    @include mobile {
+      padding-bottom: 56px;
+    }
 
     &::before {
       top: -20px;
@@ -34,9 +34,9 @@
     padding: 4px 12px;
     background: #1463ff1a;
 
-		@include small-mobile {
-			margin-bottom: 18px;
-		}
+    @include small-mobile {
+      margin-bottom: 18px;
+    }
   }
   &__descr {
     margin: 0 auto 56px;
@@ -45,9 +45,9 @@
     letter-spacing: -0.04em;
     color: var(--neutral-color-100);
 
-		@include mobile {
-			margin-bottom: 36px;
-		}
+    @include mobile {
+      margin-bottom: 36px;
+    }
   }
 
   &__switcher {
@@ -73,10 +73,9 @@
     }
     &-wrapper {
       display: inline-flex;
-			align-items: center;
-			justify-content: center;
+      align-items: center;
+      justify-content: center;
       gap: 12px;
-
     }
     &-checkbox {
       appearance: none;
@@ -101,20 +100,18 @@
 
     @include mini-desktop {
       max-width: 320px;
-
-			
     }
-    
-		@include tablet {
-			max-width: 450px;
 
-			&:first-child {
-				order: 2;
-			}
-			&:last-child {
-				order: 3;
-			}
-		}
+    @include tablet {
+      max-width: 450px;
+
+      &:first-child {
+        order: 2;
+      }
+      &:last-child {
+        order: 3;
+      }
+    }
 
     &--popular {
       background-color: var(--neutral-color-90);
@@ -124,14 +121,13 @@
       @include tablet {
         transform: inherit;
         order: 1;
-				
       }
     }
   }
 
   &__plans {
     @include flex-all-between;
-
+    padding-bottom: 77px;
     @include tablet {
       flex-direction: column;
       gap: 30px;
@@ -247,6 +243,76 @@
       &--popular {
         background-color: #fff;
         color: black;
+      }
+    }
+  }
+  &__bottom {
+    &-title {
+      font-weight: 600;
+      letter-spacing: -0.04em;
+      color: var(--neutral-color-100);
+      text-align: center;
+    }
+    &-descr {
+      font-weight: 500;
+      line-height: 1.77778;
+      text-align: center;
+      color: #7e8492;
+      margin-bottom: 80px;
+    }
+  }
+  &__accordion {
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--neutral-color-30);
+    &-title {
+      @include flex-justify-between;
+      align-items: center;
+      cursor: pointer;
+    }
+    &-text {
+      font-weight: 600;
+      line-height: 1.5;
+      color: var(--neutral-color-100);
+    }
+    &-content {
+      max-width: 640px;
+      font-weight: 500;
+      line-height: 1.77778;
+      color: #7e8492;
+      max-height: 0;
+      visibility: hidden;
+      overflow: hidden;
+      opacity: 0;
+      transition: var(--transition);
+    }
+    &-content.accordion-active {
+      visibility: visible;
+      opacity: 1;
+      padding-top: 16px;
+      transition: var(--transition);
+    }
+    &-plus {
+      position: relative;
+      display: inline-block;
+      width: 18px;
+      height: 3px;
+      background-color: var(--neutral-color-100);
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 18px;
+        height: 3px;
+        background-color: var(--neutral-color-100);
+        top: 0;
+        left: 0;
+        transform: rotate(90deg);
+        transition: var(--transition);
+      }
+    }
+    &-plus.accordion-active {
+      &::before {
+        transform: rotate(0);
       }
     }
   }
