@@ -1,0 +1,77 @@
+.hero {
+  padding: 90px 0 82px;
+
+  @include mobile {
+    padding: 60px 0 62px;
+  }
+  &__title {
+    margin-bottom: 100px;
+    max-width: 741px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+
+    @include tablet {
+      margin-bottom: 60px;
+    }
+  }
+  &__map {
+    @include flex-all-between;
+    gap: 86px;
+    @include tablet {
+      flex-direction: column;
+    }
+    @include mobile {
+      gap: 36px;
+    }
+  }
+  &__contacts {
+    max-width: 176px;
+
+    @include tablet {
+      max-width: 100%;
+      @include flex-all-center;
+      gap: 40px;
+    }
+    @include small-tablet {
+      flex-direction: column;
+      text-align: center;
+    }
+		@include mobile {
+			gap: 20px;
+		}
+
+    &-item {
+      border-bottom: 1px solid #afb3bb;
+      padding-bottom: 14px;
+
+      &:not(:last-child) {
+        margin-bottom: 40px;
+        @include tablet {
+          margin-bottom: 0;
+        }
+      }
+      @include small-tablet {
+        width: 100%;
+      }
+
+      &-title {
+        margin-bottom: 8px;
+        font-weight: 700;
+        line-height: 1.33333;
+        color: var(--neutral-color-100);
+      }
+      &-descr {
+        margin-bottom: 20px;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #7e8492;
+      }
+      &-link {
+        font-weight: 500;
+        line-height: 1.625;
+        color: var(--neutral-color-100);
+      }
+    }
+  }
+}

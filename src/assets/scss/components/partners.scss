@@ -1,6 +1,7 @@
 .partners {
   &__container {
     padding: 87px;
+		max-width: 1110px;
 
     @include flex-all-center;
     gap: 30px;

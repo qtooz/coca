@@ -1,0 +1,11 @@
+@import './mixins/idex';
+@import './base/idex';
+@import './global/idex';
+
+//  components
+
+@import './components/header';
+@import './components/contact/hero.scss';
+@import './components/partners';
+@import './components/footer';
+
