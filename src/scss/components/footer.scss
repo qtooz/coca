@@ -50,8 +50,9 @@
   }
 
   &__btn {
+		display: inline-block;
+		@include flex-all-center;
     font-weight: 700;
-    text-align: center;
     color: black;
     background-color: #fff;
     border-radius: 100px;
