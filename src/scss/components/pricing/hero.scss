@@ -202,7 +202,7 @@
       &::before {
         content: '';
         display: inline-block;
-        background: url(../icons/pricing-list-icon.svg);
+        background: url(../assets/icons/pricing-list-icon.svg);
         width: 20px;
         height: 20px;
         margin-right: 10px;
@@ -217,7 +217,7 @@
         color: #7e8492;
 
         &::before {
-          background: url(../icons/pricing-list-icon-inaccess.svg);
+          background: url(../assets/icons/pricing-list-icon-inaccess.svg);
         }
       }
       &--popular {
