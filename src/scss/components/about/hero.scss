@@ -1,0 +1,122 @@
+.hero {
+  padding: 105px 0 165px;
+  @include tablet {
+    padding: 60px 0 80px;
+  }
+  @include mobile {
+    padding: 40px 0 0;
+  }
+  &__title {
+    max-width: 959px;
+    margin-bottom: 118px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+
+    @include tablet {
+      margin-bottom: 60px;
+    }
+    @include small-mobile {
+      margin-bottom: 40px;
+    }
+  }
+  &__subtitle {
+    @include flex-justify-between;
+    align-items: center;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &-text {
+      max-width: 738px;
+      font-weight: 600;
+      line-height: 1.3125;
+      letter-spacing: -0.03em;
+      color: var(--neutral-color-100);
+
+      &::before {
+        width: 355px;
+        transform: translateY(-82px);
+      }
+    }
+    &-icon {
+      svg path {
+        fill: var(--neutral-color-100);
+      }
+      svg rect {
+        fill: var(--neutral-color-100);
+      }
+      svg circle {
+        fill: var(--neutral-color-100);
+      }
+    }
+  }
+}
+
+.about {
+  &__slider {
+    position: relative;
+    padding: 135px 0 160px !important;
+
+    @include tablet {
+      padding: 70px 0 80px !important;
+    }
+    @include small-mobile {
+      padding: 45px 0 60px !important;
+    }
+    &-btns {
+      position: absolute;
+      top: 245px;
+      left: 39.6%;
+      transform: translateX(-50%);
+      @include flex-all-center;
+      z-index: var(--z-index-2);
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: #fff;
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+    &-wrapper {
+    }
+    &-slide {
+      & img {
+        margin-bottom: 24px;
+      }
+    }
+    &-title {
+      margin-bottom: 8px;
+      font-weight: 600;
+      line-height: 1.5;
+      letter-spacing: -0.01em;
+      color: var(--neutral-color-100);
+    }
+    &-text {
+      margin-bottom: 20px;
+      font-weight: 500;
+      line-height: 1.77778;
+      color: #7e8492;
+    }
+    &-btn {
+      font-weight: 700;
+      line-height: 1.5;
+      text-align: center;
+      color: #fff;
+      border-radius: 100px;
+      padding: 16px 32px;
+      background-color: black;
+      transition: var(--transition);
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+}
