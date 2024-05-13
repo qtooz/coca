@@ -9,11 +9,8 @@ export const useAboutSlider = () => {
     slidesPerView: 1.5,
     spaceBetween: 32,
     loop: true,
-    centeredSlides: true,
+    centeredSlides: false,
     breakpoints: {
-      993: {
-        centeredSlides: false,
-      },
 			768: {
 				slidesPerView: 2.5,
 			}
