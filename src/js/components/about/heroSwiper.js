@@ -1,8 +1,6 @@
 import Swiper from 'swiper';
 import 'swiper/css';
-import { Navigation, EffectFade, Autoplay } from 'swiper/modules';
-import 'swiper/css/effect-fade';
-import 'swiper/css/autoplay';
+
 
 export const useAboutSlider = () => {
   new Swiper('.about__slider', {
@@ -18,27 +16,17 @@ export const useAboutSlider = () => {
   });
 };
 
-export const useTestimonialsSlider = () => {
-  new Swiper('.testimonials__slider', {
-    modules: [Navigation, EffectFade, Autoplay],
-    effect: 'fade',
-
-    fadeEffect: {
-      crossFade: true,
-    },
-
-    slidesPerView: 'auto',
-    spaceBetween: 22,
+export const useTeamSlider = () => {
+  new Swiper('.team__slider', {
+    slidesPerView: 2,
+    spaceBetween: 32,
     loop: true,
-
-    autoplay: {
-      delay: 1000,
-    },
-    speed: 300,
-
-    navigation: {
-      prevEl: '.testimonials__btn--prev',
-      nextEl: '.testimonials__btn--next',
+    centeredSlides: false,
+    breakpoints: {
+			768: {
+				slidesPerView: 3,
+				
+			}
     },
   });
 };
