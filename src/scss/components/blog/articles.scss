@@ -1,5 +1,8 @@
 .articles {
-  
+  padding-bottom: 80px;
+	@include tablet {
+		padding-bottom: 40px;
+	}
 
 	&__container {
 		position: relative;
