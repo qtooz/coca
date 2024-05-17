@@ -5,9 +5,11 @@ import { useBurger } from './components/burger.js';
 import { accordionMobile } from './components/home/accardion.js';
 import { useBlockTab } from './components/blog/tabBlock.js';
 import { useBlogSlider } from './components/blog/heroSwiper.js';
+import {useArticlesSlider} from './components/blog/articleSwiper.js';
 
 useTheme();
 useBurger();
 accordionMobile();
 useBlockTab();
 useBlogSlider();
+useArticlesSlider();

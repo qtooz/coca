@@ -7,6 +7,7 @@ import { useAboutSlider } from './components/about/heroSwiper.js';
 import { useTeamSlider } from './components/about/heroSwiper.js';
 
 
+
 useTheme();
 useBurger();
 accordionMobile();

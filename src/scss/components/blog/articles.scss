@@ -1,0 +1,119 @@
+.articles {
+  
+
+	&__container {
+		position: relative;
+	}
+  &__title {
+    margin-bottom: 24px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+
+		@include small-mobile {
+			margin-bottom: 18px;
+		}
+  }
+  &__descr {
+    margin-bottom: 80px;
+    max-width: 435px;
+    font-weight: 500;
+    line-height: 1.77778;
+    color: #7e8492;
+
+		@include tablet {
+			margin-bottom: 50px;
+		}
+  }
+
+  &__slider {
+    &-wrapper {
+			
+    }
+    &-slide {
+      img {
+        margin-bottom: 24px;
+      }
+      &-title {
+				max-width: 407px;
+        margin-bottom: 16px;
+        font-weight: 600;
+        line-height: 1.3125;
+        letter-spacing: -0.03em;
+        color: var(--neutral-color-100);
+      }
+      &-descr {
+				max-width: 403px;
+        margin-bottom: 24px;
+        font-weight: 500;
+        line-height: 1.77778;
+        color: #7e8492;
+      }
+      &-btn {
+        @include flex-all-center;
+        border: 1px solid #ced1d8;
+        border-radius: 100px;
+        font-weight: 700;
+        line-height: 1.5;
+        width: 175px;
+        height: 56px;
+        color: var(--neutral-color-100);
+        transition: var(--transition);
+
+        &:hover {
+          border: 1px solid var(--neutral-color-100);
+					opacity: 0.8;
+        }
+      }
+    }
+		&-buttons {
+			position: absolute;
+			top: 50px;
+			right: 0;
+			display: flex;
+			gap: 16px;
+
+			@include mobile {
+				top: 110px;
+			}
+			@include small-mobile {
+				top: 115px;
+			}
+		}
+		&-prev, 
+		&-next {
+			@include flex-all-center;
+			border: 1px solid #ced1d8;
+			border-radius: 100px;
+			width: 50px;
+			height: 50px;
+			transition: var(--transition);
+			cursor: pointer;
+	
+			@include small-mobile {
+				width: 40px;
+				height: 40px;
+			}
+	
+			& svg path {
+				transition: var(--transition);
+			}
+	
+			&:hover {
+				background-color: var(--neutral-color-100);
+				border: var(--neutral-color-100);
+	
+				& svg path {
+					fill: var(--neutral-color-10);
+				}
+			}
+			
+		}
+		&-next {
+			
+				transform: rotate(180deg);
+			
+		}
+  }
+}
